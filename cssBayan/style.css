@@ -3,7 +3,7 @@ body {
     font-size: 22px;
     line-height: 1.5;
 
-    max-width: 700px;
+    max-width: 1920px;
     margin: 0 auto;
     background-color: #dbdada;
 }
@@ -14,6 +14,7 @@ body {
 
 .bayan {
     margin: 20px auto;
+    width: 700px;
 }
 
 .bayan-item {
@@ -23,9 +24,11 @@ body {
     transition: color .2s ease-out;
 }
 
+
 .bayan-item:hover {
     color: black;
 }
+
 
 .title-item {
     display: flex;
@@ -41,25 +44,28 @@ body {
     cursor: pointer;
 }
 
+
 .fa-plus {
     width: auto;
     position: absolute;
     top: 50%;
     right: 15px;
     transform: translateY(-50%);
+    cursor: pointer;
+    position: absolute;
 }
 
-.fa-xmark {
+.fa-plus1 {
+    color: #000;
     width: auto;
     position: absolute;
     top: 50%;
     right: 15px;
     transform: translateY(-50%);
+    cursor: pointer;
+    position: absolute;
 }
 
-.fa-xmark {
-    opacity: 0;
-}
 
 .bayan-input {
     width: 0;
@@ -73,18 +79,38 @@ body {
 
 .bayan-input:hover ~ .bayan-img {
     display: block;
-    transition: .2s ease-out;
+    transition: .2s all ease-out;
 }
 
 .bayan-img {
     display: none;
 }
 
-.bayan-img, img {
+.bayan-img, .bayan-img1, img {
     width: 500px;
     margin: 0 auto;
 }
 
-@media (max-width: 1230px) {
-    
+@media (max-width: 1180px) {
+    body {
+        font-size: 18px;
+    }
+    .bayan {
+        width: 600px;
+    }
+    .bayan-img, .bayan-img1, img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 568px) {
+    body {
+        font-size: 16px;
+    }
+    .bayan {
+        width: 400px;
+    }
+    .bayan-img, .bayan-img1, img {
+        width: 300px;
+    }
 }
