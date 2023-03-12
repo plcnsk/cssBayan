@@ -27,11 +27,38 @@ body {
     color: black;
 }
 
+.title-item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+
 .bayan-title {
     display: block;
     padding: 10px 0;
-
+    width: 100%;
     cursor: pointer;
+}
+
+.fa-plus {
+    width: auto;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+.fa-xmark {
+    width: auto;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+.fa-xmark {
+    opacity: 0;
 }
 
 .bayan-input {
@@ -44,8 +71,9 @@ body {
     position: absolute;
 }
 
-.bayan-input:checked + .bayan-img {
+.bayan-input:hover ~ .bayan-img {
     display: block;
+    transition: .2s ease-out;
 }
 
 .bayan-img {
@@ -55,4 +83,8 @@ body {
 .bayan-img, img {
     width: 500px;
     margin: 0 auto;
+}
+
+@media (max-width: 1230px) {
+    
 }
